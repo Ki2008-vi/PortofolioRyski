@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --animate-aurora: aurora 25s ease-in-out infinite;
+  --animate-aurora-reverse: aurora-reverse 30s ease-in-out infinite;
+
+  @keyframes aurora {
+    0%, 100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(60px, -100px) scale(1.15);
+    }
+    66% {
+      transform: translate(-50px, 50px) scale(0.85);
+    }
+  }
+  @keyframes aurora-reverse {
+    0%, 100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    40% {
+      transform: translate(-70px, 60px) scale(1.1);
+    }
+    70% {
+      transform: translate(50px, -50px) scale(0.9);
+    }
+  }
+}
+
+/* Base style resets with luxurious black gradation backgrounds */
+body {
+  font-family: var(--font-sans);
+  background-color: #060606;
+  color: #e5e5e5;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Custom scroll bar style representing a gold-accented high-end track */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border-radius: 99px;
+  border: 1px solid #222222;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
+}
+
